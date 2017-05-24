@@ -1,0 +1,18 @@
+<!--login.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset" style="text-align:center;display:flex;flex-direction:column;align-items:center;width:100%;font-size:0.8rem;font-family:'微软雅黑';">
+
+<view class="section" style="height:3rem;border-bottom:1px solid #eee;width:18rem;">
+<input bindinput="handlePhone" value="{{phone}}" maxlength="11" placeholder="手机号" type="number" style="line-height:3rem;height:100%;text-align:left;padding-left:5px;font-family:'微软雅黑';"/>
+</view>
+ 
+<view class="section" style="height:3rem;border-bottom:1px solid #eee;">
+<input password bindinput="handlePwd" placeholder="密码" style="line-height:3rem;height:100%;text-align:left;padding-left:5px;font-family:'微软雅黑';"/>
+</view>
+
+<view class="txt" style="height:3rem;text-align:left;">
+<navigator style="height:100%;line-height:3rem;color:#989898;font-size:0.8rem;font-family:'微软雅黑';" url="/pages/register/register" hover-class="navigator-hover">还没有账号？点击此处立即<text style="color:#93eeab;text-direction:underline;font-size:0.8rem;">注册</text></navigator>
+</view>
+
+<button type="primary" bindtap="handleSubmit" loading="{{loading}}" plain="{{plain}}"
+disabled="{{disabled}}" style="background:#0cc440;height:105.7rpx;font-size:17px;font-family:'微软雅黑';">提交</button>
+</form>

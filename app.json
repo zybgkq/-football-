@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/listpage/listpage_one",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#0cc440",
+    "navigationBarTitleText": "篮球圈",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":false
+  },
+  "tabBar": {
+    "selectedColor":"red",
+    "backgroundColor":"pink",
+    "borderStyle":"white",
+    "list": [
+      {  
+        "iconPath":"imgs/boy.png",
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "selectedIconPath":"imgs/girl.png"
+      },
+      {
+        "iconPath": "imgs/boy.png",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "imgs/girl.png"
+      }
+    ]
+  },
+  "networkTimeout":{
+    "request":6000
+  }
+}

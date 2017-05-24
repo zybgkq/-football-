@@ -1,0 +1,129 @@
+<template name="msgItem"> <!--定义模板-->
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+
+<view>
+ 我是{{userName}}
+
+  <!--5-23组件-->
+   <!--<scroll-view scroll-y="true" scroll-into-view="yellow" style="height: 200px;" lower-threshold="20" bindscrolltolower="loaderMore" bindscroll="scroll" scroll-with-animation enable-back-to-top>
+      <view id="green" class="scroll-view-item bc_green">green</view>
+      <view id="red"  class="scroll-view-item bc_red">red</view>
+      <view id="yellow" class="scroll-view-item bc_yellow">yellow</view>
+      <view id="blue" class="scroll-view-item bc_blue">blue</view>
+    </scroll-view>-->
+
+<swiper autoplay="true" indicator-dots indicator-color="pink" indicator-active-color="blue" tyle="height:150px" current="1" circular bindchange="handleChange">
+  <block wx:for="{{imgUrls}}"> <!--<template>-->
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+ <!--<movable-area style="height: 400rpx;width: 750rpx;background: red;">
+    <movable-view direction="all" inertia style="height: 50px; width: 50px; background: blue;" x="{{x}}" y="{{y}}" out-of-bounds damping="100">
+    </movable-view>
+  </movable-area>-->
+
+
+<view class=""> 
+   <icon type="success_no_circle" size="40" color="pink"/> 
+   <text selectable>今晚到我房里来，探讨剧情！</text>
+
+   <progress percent="{{percent}}" show-info stroke-width="3" activeColor="pink" backgroundColor="#e7e7e7" active/>
+</view>
+<!--表单-->
+<view class="classname">
+  <button size="mini" type="primary" plain hover-class="hover">提交</button>
+
+<!--<checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{checkeditems}}">
+     <checkbox value="{{item.name}}" checked="{{item.checked}}" color="pink"/>
+    {{item.value}}
+    </label>
+  </checkbox-group>-->
+
+  <!--<input bindinput="handleInput" value="{{userName}}" placeholder="这是一个可以自动聚焦的input" placeholder-style="color:pink;font-size:14px;" maxlength="16" focus/>
+   {{userName}}
+  -->
+  <!--<view class="section">
+    <view class="section__title">地区选择器</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="value">
+      <view class="picker">
+        当前选择：{{array[index].value}}
+      </view>
+    </picker>
+  </view>
+
+ <view class="section">
+  <view class="section__title">时间选择器</view>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="picker">
+        当前选择: {{time}}
+      </view>
+    </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">日期选择器</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2018-09-01" bindchange="bindDateChange" fields="month">
+  <!--//fields 选择粒度，day是选年月日，month表示选择年月，year选择年-->
+  <!--  <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>-->
+
+<!--<view>
+  <view>{{year}}年{{month}}月{{day}}日</view>
+  <picker-view indicator-style="height:50px;" style="width: 100%; height: 180px;" value="{{value}}" bindchange="bindPickerViewChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" style="line-height: 50px;color:red">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+    </picker-view-column>
+  </picker-view>
+</view>-->
+ 
+<!--<radio-group bindchange="handleRadio">
+  <label>
+    男：<radio value="0" />
+  </label>
+  <label>
+    女：<radio value="1" />
+  </label>
+</radio-group>-->
+
+<!--<slider min="1" step="2" value="20" activeColor="pink" show-value bindchange="handleSlider"/>
+
+<switch type="switch" checked color="pink" bindchange="handleSwitch"/>-->
+
+
+<!--<view class="section">
+  <form bindsubmit="bindFormSubmit">
+   <!--所有添加到form表单的组件都要添加name属性
+    <textarea bindinput="handleTextArea" placeholder="form 中的 textarea" name="content" class="" value="{{userName}}"/>
+    <button form-type="submit"> 提交 </button>
+  </form>
+</view>-->
+
+<!--<image src="http://pic.58pic.com/58pic/13/60/27/72h58PICgzY_1024.jpg" class="imgs" bindload="imgLoader" mode="bottom"></image>
+<image src="http://pic.58pic.com/58pic/13/60/27/72h58PICgzY_1024.jpg" class="imgs" bindload="imgLoader" mode="center"></image>-->
+
+
+<map longitude="104.065769" latitude="30.657655" scale="14" markers="{{markers}}" controls="{{controls}}" show-location bindcontroltap="handleControl"/>
+
+</view>
+
+
+
+
+</view>

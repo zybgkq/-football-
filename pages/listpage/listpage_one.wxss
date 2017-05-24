@@ -1,0 +1,55 @@
+/* listpage_one.wxss */
+.contain{
+  width: 100%;
+  height: 100%;
+  position: relative;
+} 
+.imgbox{
+  width: 100%;
+}
+.item_box{
+  width: 350rpx;
+  height:420rpx;
+  float: left;
+  margin: 10rpx;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+.item_box image{
+  display: block;
+  width: 100%;
+  height:350rpx;
+  border-bottom:1px solid #eee; 
+}
+.item_box text{
+  line-height: 70rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  font-family: "微软雅黑"
+}
+.top_tab{
+ 
+}
+.swiper-tab{
+  width: 100%;
+  font-family: "微软雅黑";
+  border-bottom: 2px solid #eee;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-weight: bold;
+}
+.swiper-tab-item{
+    display: inline-block;
+    width: 33.33%;
+    font-size: 30rpx;
+    color:#aaa;
+}
+swiper{
+  height: 980rpx;
+}
+.active{
+    color:limegreen;
+    border-bottom: 4rpx solid limegreen;
+}
